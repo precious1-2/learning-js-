@@ -282,3 +282,32 @@ const myfunction2 = function (a, b) {
     console.log(a + b);
 }
 myfunction2(7, 8)
+
+const precious = function (a, b) {
+    return a * b;
+};
+precious(9, 6)
+const test = precious(10, 10);
+console.log(test);
+
+
+
+const calcaverage = function (a, b, c) {
+    const avg = (a + b + c) / 3;
+    return number(avg.toFixed(2))
+};
+const avgDolphin2 = calcaverage(123, 98, 89);
+const avgKaola2 = calcaverage(110, 87, 95);
+console.log(avgDolphin2, avgKaola2);
+
+function checkwinner(teamA, teamB) {
+    if (teamA > teamB) {
+        console.log("First Team Won");
+    } else if (teamB > teamA) {
+        console.log("Second Team Won");
+    } else {
+        console.log("No winner");
+    }
+}
+
+checkwinner(avgDolphin2, avgKaola2);
