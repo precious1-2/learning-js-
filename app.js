@@ -253,61 +253,226 @@
 //     console.log();
 // }
 
-function discrbecountry(country, population, capitalcity) {
+// function discrbecountry(country, population, capitalcity) {
      
-    console.log(`${country} has ${population} million people and it capital city is ${capitalcity}` );
-}
-discrbecountry("finland", 6, 'helsinki');
-discrbecountry("russsia", 65, "moscow");
-discrbecountry('nigeria', 224, 'abuja');
+//     console.log(`${country} has ${population} million people and it capital city is ${capitalcity}` );
+// }
+// discrbecountry("finland", 6, 'helsinki');
+// discrbecountry("russsia", 65, "moscow");
+// discrbecountry('nigeria', 224, 'abuja');
 
-// cheack if email is valid or not
+// // cheack if email is valid or not
 
-function checkemail(email) {
-    if (email.includes("@")) {
-        console.log(`${email} is a valid email address`);
-    } else {
-        console.log(`${email} is not a valid email`);
-    }
-}
-checkemail("abc@google.com")
+// function checkemail(email) {
+//     if (email.includes("@")) {
+//         console.log(`${email} is a valid email address`);
+//     } else {
+//         console.log(`${email} is not a valid email`);
+//     }
+// }
+// checkemail("abc@google.com")
 
-// function expression
-const myage = 90
-console.log(myage);
+// // function expression
+// const myage = 90
+// console.log(myage);
 
-// my function2(4, 5);
-const myfunction2 = function (a, b) {
-    console.log("anything");
-    console.log(a + b);
-}
-myfunction2(7, 8)
+// // my function2(4, 5);
+// const myfunction2 = function (a, b) {
+//     console.log("anything");
+//     console.log(a + b);
+// }
+// myfunction2(7, 8)
 
-const precious = function (a, b) {
-    return a * b;
+// const precious = function (a, b) {
+//     return a * b;
+// };
+// precious(9, 6)
+// const test = precious(10, 10);
+// console.log(test);
+
+
+
+// const calcaverage = function (a, b, c) {
+//     const avg = (a + b + c) / 3;
+//     return number(avg.toFixed(2))
+// };
+// const avgDolphin2 = calcaverage(123, 98, 89);
+// const avgKaola2 = calcaverage(110, 87, 95);
+// console.log(avgDolphin2, avgKaola2);
+
+// function checkwinner(teamA, teamB) {
+//     if (teamA > teamB) {
+//         console.log("First Team Won");
+//     } else if (teamB > teamA) {
+//         console.log("Second Team Won");
+//     } else {
+//         console.log("No winner");
+//     }
+// }
+
+// checkwinner(avgDolphin2, avgKaola2);
+
+// arrow function
+
+const logger = (a, b, c) => {
+    const total = a + b + c;
+    return total;
 };
-precious(9, 6)
-const test = precious(10, 10);
-console.log(test);
 
+console.log(logger(4, 5, 7));
 
+// const diffrence = (a, b) =>{
+// return a - b;
+//}
+const diffrence = (a, b) => a - b;
+console.log(diffrence(67, 50));
 
-const calcaverage = function (a, b, c) {
+// const calcaverage = function (a, b, c) {
+//     const avg = (a + b + C) / 3;
+//     return number(avg.toFixed(2));
+// }
+const calcavg = (a, b, c) => {
     const avg = (a + b + c) / 3;
-    return number(avg.toFixed(2))
-};
-const avgDolphin2 = calcaverage(123, 98, 89);
-const avgKaola2 = calcaverage(110, 87, 95);
-console.log(avgDolphin2, avgKaola2);
+    return number(avg.toFixed(2));
+}
 
-function checkwinner(teamA, teamB) {
-    if (teamA > teamB) {
-        console.log("First Team Won");
-    } else if (teamB > teamA) {
-        console.log("Second Team Won");
+// console.log("outside" + surname)
+const a = 5;
+console.log(a);
+
+const local = () => {
+    const a = 7;
+    const b = 8;
+
+    console.log(a);
+};
+local();
+// console.log(b)
+console.log(a);
+
+// Array[element]
+
+const students = ["mofe", "precious", "sheu"];
+console.log(students);
+// arrays properties and methods
+console.log(students.length);
+
+// get element in array
+console.log(students[0]);
+console.log(students[students.length - 1]);
+
+// convertinf an array to a string - string, join
+console.log(students.toString());
+console.log(students.join('-'));
+// adding elements to an array - push, unshift
+
+students.push('ola')
+students.push('nike')
+students.push('funsho')
+
+students.unshift('Ebuka')
+students.unshift('emma')
+
+console.log(students);
+
+// removing elements from an array pop shift 
+students.pop();
+students.pop();
+students.pop();
+
+students.shift();
+students.shift();
+console.log(students);
+
+// aranging element in an array - sort - reverse 
+console.log(students.sort());
+console.log(students.reverse());
+console.log(students.includes("ola"));
+console.log(students.includes("mofe"));
+
+// indexof lastindexof
+const anotherstudents = ['toyin', 'zainab'];
+console.log(students.concat(anotherstudents, ['ayo', 'ade', 'ade']));
+
+// slice
+console.log(students.slice(0, 2)); //0, 1
+
+
+// include, splice, sort, pop, push, shift, unshift,
+// slice, concat, join, tostring
+// filter, find, map, foreach
+
+const countries = ['germany', 'scotland', 'ireland', 'canada']
+console.log(countries.length);
+
+if (countries.length > 5) {
+    console.log("country is greater than 5");
+} else  {
+    console.log("country is less than 5");
+}
+
+let savings = 30000
+const transaction = [5000, -10000, -100]
+
+transaction.push(-2000)
+transaction.push(50000)
+transaction.push(-3000)
+transaction.pop()
+console.log(transaction);
+let debit = 0;
+let credit = 0;
+
+for (i = 0; i < transaction.length; i++){
+    // console.log(transaction[i]);
+    // savings += transaction[i];
+    savings += transaction[i];
+    if (transaction[i] < 0) {
+        debit += transaction[i]
+        console.log(`you have been debited ${transaction[i]}`);
     } else {
-        console.log("No winner");
+        credit += transaction[i]
+        console.log(`you have been credited ${transaction[i]}`);
     }
 }
 
-checkwinner(avgDolphin2, avgKaola2);
+console.log(`the total debit is ${debit}`);
+console.log(`the total credit is ${credit} `);
+console.log(`your accout balance is ${savings}`);
+
+// filter, find, map, foreach
+// higher order function,callback func
+// for each
+const friends = ['john', 'jane', 'adam', 'jennifer', 'owen'];
+friends.includes('lester');
+
+friends.forEach((friend, index) => {
+    console.log(`${index}the name of my friend is ${friend}`);
+});
+
+friends.forEach((f, index) => {
+    console.log(f, index);
+});
+// map
+friends.map((val) => {
+    if (val === 'jane') {
+        console.log(`${val} is my best friend`);
+    } else {
+        console.log(`${val} is just my friend`);
+    }
+});
+
+// filter find
+
+const filteredfriends = friends.filter((friend) => {
+    return friend.length > 6;
+});
+console.log(filteredfriends);
+
+// find 
+const founduser = friends.find((friend) => {
+    return friend.startsWith('j');
+})
+console.log(founduser);
+
+const result = friends.filter((friend => friend.length > 6))
+const result2 = friends.find((f) => f.startsWith('A'))
