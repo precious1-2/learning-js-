@@ -446,7 +446,7 @@ const friends = ['john', 'jane', 'adam', 'jennifer', 'owen'];
 friends.includes('lester');
 
 friends.forEach((friend, index) => {
-    console.log(`${index}the name of my friend is ${friend}`);
+    console.log(`${index}the name of my friend is ${friend }`);
 });
 
 friends.forEach((f, index) => {
