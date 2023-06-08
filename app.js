@@ -503,7 +503,7 @@
 // console.log(user.firstname.toUpperCase());
 // console.log(user.age);
 
-// // objname [property name 
+// // objname [property name
 // console.log(user['friends'].includes('steven'));
 // const nameKey = 'Name';
 // console.log(user['last' + nameKey]);
@@ -601,5 +601,86 @@
 
 
 // //const playerChoice = prompt("Enter a choice (rock, paper, scissors):');
-// // const checkWin = function (computer, player){ 
+// // const checkWin = function (computer, player){
+    // if(computer === player){
+        // return 'this is a tie';
+    //}else if
 // //}
+// asynchronous js
+// console.log('first');
+// setTimeout(() => {
+//     console.log("second");
+// }, 15000);
+
+// const myinterval = setInterval(() => {
+//     console.log("i am in the interval");
+// }, 2000);
+// setTimeout(() => {
+//     clearInterval(myinterval);
+// }, 1500)
+
+
+// console.log("third");
+
+// // feching data - APIs -applocation programming interface
+// // JSON - javascript object notation
+
+const url = "https://jsonplaceholder.typicode.com/users";
+
+// fetch(url)
+//     .then((Respose) => {
+//         return Respose.json();
+//     })
+//     .then((users) => {
+//         console.log(users);
+//     });
+
+const fetchdata = (site) => {
+    fetch(site)
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => {
+            console.log(err);
+        });
+};
+
+fetchdata(url)
+fetchdata("https://jsonplaceholder.typicode.com/posts")
+
+
+// try and catch
+try {
+    
+} catch (error) {
+    
+}
+
+// async / await 
+const getData = async (site) => {
+    try {
+        const response = await fetch(site);
+        const data = await response.json();
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+getData(url)
+
+// storage api
+// local storage - setitem, get item, remove item, clear, length
+// setting item
+localStorage.setItem('name', 'Ola Ola');
+
+// getting item
+const result = localStorage.getItem('name');
+console.log(result);
+
+// removeing item
+localStorage.removeItem('')
+
+// checking lengh
+const len = localStorage.length;
+console.log(len);
+
+// localstorage.clear() 
